@@ -53,26 +53,25 @@ Now that I have data that certain IPs in the logs appear to be malicious/suspici
 <img src="https://github.com/KirkDJohnson/Setting-Up-Splunk-with-API-Integration-Lab/assets/164972007/faad2143-8a2a-4b1f-ade2-bd8a04f43e4f"  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
 <br />
 <br />
-I included the newly installed app into the search as well as removed all IPv6 and private IP andaddresse because they are non-unique and irrelevant to block as you may block proper intranet traffic, so what is left was all public IPv4 addresses. <br/>
-<img src=""  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
+I included the newly installed app into the search as well as removed all IPv6 and private IP andaddresse because they are non-unique and irrelevant to block as you may block proper intranet traffic, so what is left was all public IPv4 addresses. The serach demonstrtares that the App and API were correclty installed and configured and to double check that the data being shown in Splunk was accurate I went to AbuseIPDB's website and another website whois which is very similar in functionality and it confrims taht the data is the same. <br/>
+<img src="https://github.com/KirkDJohnson/Setting-Up-Splunk-with-API-Integration-Lab/assets/164972007/0b6f16fc-69ad-4c3b-b41c-61f13516852e"  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
+  <img src="https://github.com/KirkDJohnson/Setting-Up-Splunk-with-API-Integration-Lab/assets/164972007/ae2fb2e3-8a5f-4b45-bea4-23ecf265b507"  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
+  <img src="https://github.com/KirkDJohnson/Setting-Up-Splunk-with-API-Integration-Lab/assets/164972007/83bb842f-e9c7-45c0-bcfa-82e2960b6746"  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
 <br />
 <br />
-Text<br/>
-<img src=""  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
+I modified the SPL a little to outpt the count of the country, saved it to the same dashboard and modified the previous dashboard I made to remove the private IP addresses because they were squwling the resuilts and as mentioned before irrelvelnt to block and analyze compraraerd to public IP addresses. And the finished dashboard with the two searches<br/>
+<img src="https://github.com/KirkDJohnson/Setting-Up-Splunk-with-API-Integration-Lab/assets/164972007/bbc41906-09b2-421c-9018-ebc6e8d048ce"  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
+<img src="https://github.com/KirkDJohnson/Setting-Up-Splunk-with-API-Integration-Lab/assets/164972007/bc18a3a6-64c8-460f-a22f-69a6dce54960"  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
+<img src="https://github.com/KirkDJohnson/Setting-Up-Splunk-with-API-Integration-Lab/assets/164972007/7d019d56-678d-4388-81a2-10dc016f011e"  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
 <br />
 <br />
-Text<br/>
-<img src=""  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
+Lastly, due to the data showing that traffic from China was the significant part of the malicious traffic, in this scenerio I knew that the there would be no reason from traffic originatibg from China, I made a search just fror Chian traffic with AbuseIPDB and created an alert for it that would send me an emial if traffic origination from China appeared in the Splunk logs so I could further ivestigate whether it to be malicous or not as a SOC Analyst. <br/>
+<img src="https://github.com/KirkDJohnson/Setting-Up-Splunk-with-API-Integration-Lab/assets/164972007/5b763418-9772-4a26-a408-83ca98efb69a"  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
+<img src="https://github.com/KirkDJohnson/Setting-Up-Splunk-with-API-Integration-Lab/assets/164972007/1d09dd6e-2a06-49eb-b438-57e2bbb553a4"  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
+<img src="https://github.com/KirkDJohnson/Setting-Up-Splunk-with-API-Integration-Lab/assets/164972007/fef8945d-9529-4d2c-9f04-ef69310b9da7"  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
 <br />
 <br />
-Text<br/>
-<img src="" height="80%" width="80%"  alt="Splunk Installation and Configuration Lab"/>
-<br />
-<br />
-Text<br/>
-<img src=""  height="80%" width="80%" alt="Splunk Installation and Configuration Lab"/>
-<br />
-<br />
+
 
 
 <h2>Thoughts</h2>
