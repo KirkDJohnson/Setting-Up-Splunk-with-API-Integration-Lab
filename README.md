@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-Text
+In this lab, my first goal was to install and configure Splunk Enterprise and Universal Forwarder on a Windows 10 Virtual Machine. Following this setup, I downloaded a dataset named BotsV3, consisting of millions of diverse logs from various sources, to analyze within Splunk. Focusing specifically on IP traffic, I aimed to identify potentially malicious activity. Beginning with fine-tuning a Search Processing Language (SPL) query, I generated a table showing the top IP addresses making connections. However, a significant portion of the traffic originated from private IP addresses, indicating a brute force probing attack targeting hosts with open ports. To enhance visualization and make it more understandable, I saved the search to a dashboard. Seeking additional information about the IPs, I turned to the AbuseIPDB website, which has a catalog of IPs associated with online malicious activities, along with location data for further identification. AbuseIPDB had a Splunk app whcih I integrated into my account with Splunk via an API token, enabling seamless access to the AbuseIPDB through Splunk's search and processing functions. Upon confirming the successful installation of the app, I modified my previous search to include the AbuseIPDB database, enriching the log data further. The analysis revealed that the majority of malicious traffic originated from China. I exported the search that showed the top countries where the malicious IPs originated from to the same dashboard as earlier. Lastly, I refined my SPL query to exclusively display traffic originating from China and set up an alert to run hourly, notifying me via email of any Chinese-originated traffic detected in Splunk. This prepared me for potential future analysis in a Security Operations Center (SOC) Analyst role.
 <br />
 
 
@@ -75,7 +75,7 @@ Lastly, due to the data showing that traffic from China was the significant part
 
 
 <h2>Thoughts</h2>
-Text
+This lab proved highly beneficial as it offered me hands-on experience in a part of Splunk I hadn't previously explored: downloading and installing apps within Splunk. While I had configured Splunk in the past, this exercise served as valuable practice, improving my proficiency with the process. The lab also increased my proficiency in Search Processing Language (SPL), Splunk's search language, is advantageous given its popularity as a Security Information and Event Management (SIEM) solution. Moreoceer, I discovered a new search command, distinct_count, which efficiently calculates the number of unique values for fields. Unlike my previous methods using deduplicate and count, this new command is more straightforward, resulting in faster search response times. However, the primary takeaway from this lab was the experience with the configuration of a Splunk app using an API token and effectively utilizing it within the search function. After reviewing the README for the AbuseIPDB app I installed, the process became clear and streamlined. Overall, this lab significantly expanded my comprehension and familiarity with Splunk, proving to be a valuable learning experience.
 
 
 <!--
